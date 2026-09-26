@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Aayra 💜</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  color:#514064;
+  overflow-x:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e6dcff,
+      #ffdced,
+      #cceeff
+    );
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.cloud{
+  position:fixed;
+  width:160px;
+  height:45px;
+  background:rgba(255,255,255,.55);
+  border-radius:100px;
+  z-index:0;
+}
+
+.cloud:before,
+.cloud:after{
+  content:"";
+  position:absolute;
+  background:inherit;
+  border-radius:50%;
+}
+
+.cloud:before{
+  width:70px;
+  height:70px;
+  left:20px;
+  top:-30px;
+}
+
+.cloud:after{
+  width:80px;
+  height:80px;
+  right:15px;
+  top:-40px;
+}
+
+.cloud1{
+  top:8%;
+  left:-40px;
+}
+
+.cloud2{
+  bottom:10%;
+  right:-50px;
+  transform:scale(.8);
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.page{
+  display:none;
+
+  min-height:100vh;
+
+  padding:25px 15px;
+
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
+  z-index:2;
+
+  animation:fade .5s ease;
+}
+
+.page.active{
+  display:flex;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+  width:min(430px,100%);
+
+  padding:30px 22px;
+
+  text-align:center;
+
+  background:rgba(255,255,255,.80);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:30px;
+
+  border:2px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 20px 60px rgba(110,80,150,.22);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+h1,h2,h3{
+  font-family:Georgia,serif;
+}
+
+h1{
+  font-size:38px;
+  line-height:1;
+  color:#7655a7;
+}
+
+h1 span{
+  display:block;
+  color:#df80b1;
+}
+
+h2{
+  font-size:32px;
+  color:#7959a7;
+}
+
+.subtitle{
+  color:#796c8d;
+  font-weight:bold;
+}
+
+.small-title{
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:bold;
+  color:#9475bd;
+}
+
+.sparkles{
+  color:#a986d7;
+  font-size:23px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button{
+  border:none;
+
+  padding:13px 25px;
+
+  border-radius:100px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #a88bdf,
+      #eca1c5
+    );
+
+  color:white;
+
+  font-weight:bold;
+
+  font-size:15px;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 20px rgba(150,100,190,.25);
+
+  margin-top:12px;
+}
+
+.button:disabled{
+  opacity:.4;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-area{
+  width:230px;
+  height:200px;
+
+  position:relative;
+
+  margin:20px auto;
+}
+
+.cake{
+  position:absolute;
+
+  width:180px;
+  height:105px;
+
+  bottom:30px;
+  left:25px;
+
+  background:
+    linear-gradient(
+      #f2a6c8 0 25%,
+      #ad91dc 25%
+    );
+
+  border-radius:
+    18px 18px 25px 25px;
+}
+
+.icing{
+  position:absolute;
+
+  top:10px;
+
+  width:100%;
+  height:30px;
+
+  background:#fff4fb;
+
+  border-radius:20px;
+}
+
+.cake-name{
+  position:absolute;
+
+  bottom:25px;
+
+  width:100%;
+
+  color:white;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+}
+
+.plate{
+  position:absolute;
+
+  bottom:20px;
+  left:10px;
+
+  width:210px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:#b9ddff;
+}
+
+.candles{
+  position:absolute;
+
+  top:0;
+  left:45px;
+
+  display:flex;
+  gap:22px;
+
+  z-index:5;
+}
+
+.flame{
+  border:none;
+  background:none;
+
+  font-size:29px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.flame.off{
+  opacity:0;
+  transform:scale(0);
+}
+
+
+/* =========================
+   LOCK CARD
+========================= */
+
+.lock-card{
+  padding:30px;
+
+  margin:25px auto;
+
+  border-radius:25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d9c8ff,
+      #ffd6eb
+    );
+
+  cursor:pointer;
+}
+
+.big-lock{
+  font-size:55px;
+}
+
+.lock-card b,
+.lock-card small{
+  display:block;
+}
+
+.lock-card small{
+  margin-top:5px;
+  color:#766687;
+}
+
+
+/* =========================
+   WISH
+========================= */
+
+textarea{
+  width:100%;
+
+  height:105px;
+
+  resize:none;
+
+  border:
+    2px solid #d8c9ed;
+
+  border-radius:18px;
+
+  padding:14px;
+
+  font-family:inherit;
+
+  outline:none;
+
+  background:#fffaff;
+}
+
+
+/* =========================
+   MAGIC PAPER
+========================= */
+
+.paper-area{
+  height:270px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+}
+
+.magic-paper{
+  width:220px;
+  height:170px;
+
+  background:#fffdf4;
+
+  border-radius:8px;
+
+  box-shadow:
+    0 8px 25px rgba(100,70,120,.15);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.paper-cover{
+  position:absolute;
+
+  inset:0;
+
+  background:#fffdf4;
+
+  display:grid;
+
+  place-items:center;
+
+  color:#eee4ef;
+
+  font-size:13px;
+
+  letter-spacing:1px;
+
+  transition:1s;
+}
+
+.secret-message{
+  height:100%;
+
+  display:grid;
+
+  place-items:center;
+
+  padding:20px;
+
+  font-family:Georgia,serif;
+
+  font-size:24px;
+
+  color:#9b70c7;
+}
+
+.magic-paper.revealed .paper-cover{
+  opacity:0;
+
+  transform:scale(1.4);
+
+  filter:blur(6px);
+}
+
+.magic-candle{
+  position:absolute;
+
+  right:15px;
+  bottom:0;
+
+  border:none;
+
+  background:none;
+
+  font-size:58px;
+
+  cursor:pointer;
+
+  transition:.15s;
+}
+
+.magic-candle:active{
+  transform:scale(.9);
+}
+
+.progress{
+  height:9px;
+
+  background:#eadff5;
+
+  border-radius:50px;
+
+  overflow:hidden;
+
+  margin:15px 30px;
+}
+
+#progressBar{
+  width:0;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #a98be0,
+      #efa8c8
+    );
+
+  transition:.3s;
+}
+
+.warning{
+  font-size:11px;
+  color:#8c7a96;
+}
+
+
+/* =========================
+   GIFTS
+========================= */
+
+.gift{
+  font-size:120px;
+
+  margin:25px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.gift:active{
+  transform:scale(.85);
+}
+
+.flowers{
+  font-size:55px;
+
+  line-height:1.1;
+
+  margin:25px;
+}
+
+.chocolate{
+  font-size:110px;
+
+  cursor:pointer;
+
+  display:inline-block;
+
+  margin:15px;
+
+  transition:.3s;
+}
+
+.chocolate:active{
+  transform:
+    scale(.85)
+    rotate(-8deg);
+}
+
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope{
+  width:230px;
+  height:150px;
+
+  position:relative;
+
+  margin:25px auto;
+
+  cursor:pointer;
+}
+
+.envelope-body{
+  position:absolute;
+
+  inset:20px 0 0;
+
+  background:#e5c6fa;
+
+  border-radius:8px;
+
+  display:grid;
+
+  place-items:center;
+
+  font-size:55px;
+
+  box-shadow:
+    0 10px 25px rgba(100,70,140,.2);
+}
+
+.flap{
+  position:absolute;
+
+  z-index:3;
+
+  top:20px;
+  left:0;
+
+  border-left:
+    115px solid transparent;
+
+  border-right:
+    115px solid transparent;
+
+  border-top:
+    80px solid #d5b5ef;
+
+  transform-origin:top;
+
+  transition:.6s;
+}
+
+.envelope.open .flap{
+  transform:rotateX(180deg);
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+  text-align:left;
+
+  background:#fffdf8;
+
+  padding:20px;
+
+  border-radius:18px;
+
+  margin-top:20px;
+
+  box-shadow:
+    0 5px 20px rgba(90,70,110,.15);
+
+  animation:fade .7s;
+}
+
+.letter h3{
+  text-align:center;
+
+  font-size:21px;
+
+  color:#a45f9b;
+}
+
+.letter p{
+  font-size:14px;
+
+  line-height:1.65;
+
+  margin:12px 0;
+}
+
+.signature{
+  text-align:center;
+
+  font-weight:bold;
+
+  color:#8767ad;
+
+  margin-top:18px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden{
+  display:none!important;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:380px){
+
+  h1{
+    font-size:34px;
+  }
+
+  .card{
+    padding:25px 17px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+
+
+<!-- ==================================================
+     PAGE 1 — CAKE
+================================================== -->
+
+<section class="page active" id="page1">
+
+<div class="card">
+
+<div class="sparkles">
+✦ ✧ ✦
+</div>
+
+<h1>
+HAPPIEST BIRTHDAY
+<span>AAYRA</span>
+</h1>
+
+<p class="subtitle">
+OmegA baklol's magical birthday surprise 🎂💜
+</p>
+
+
+<div class="cake-area">
+
+<div class="candles">
+
+<button class="flame"
+onclick="blowCandle(0)">
+🔥
+</button>
+
+<button class="flame"
+onclick="blowCandle(1)">
+🔥
+</button>
+
+<button class="flame"
+onclick="blowCandle(2)">
+🔥
+</button>
+
+</div>
+
+
+<div class="cake">
+
+<div class="icing"></div>
+
+<div class="cake-name">
+AAYRA
+</div>
+
+</div>
+
+<div class="plate"></div>
+
+</div>
+
+
+<p id="candleText">
+Tap all 3 flames to blow the candles 🕯️
+</p>
+
+
+<button
+class="button"
+id="cakeNext"
+disabled
+onclick="nextPage(2)"
+>
+Candles blown! →
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2 — 143 BRO
+================================================== -->
+
+<section class="page" id="page2">
+
+<div class="card">
+
+<div class="small-title">
+💌 A SECRET GIFT CARD
+</div>
+
+<h2>
+143 BRO
+</h2>
+
+
+<div
+class="lock-card"
+id="lockCard"
+onclick="unlockCard()"
+>
+
+<div class="big-lock">
+🔒
+</div>
+
+<b>
+Tap the lock
+</b>
+
+<small>
+Something is waiting inside...
+</small>
+
+</div>
+
+
+<div
+class="wish-box hidden"
+id="wishBox"
+>
+
+<p>
+
+Before opening the next gift...
+
+<br>
+
+<b>
+make a wish, Aayra ✨
+</b>
+
+</p>
+
+
+<textarea
+id="wishInput"
+placeholder="Type your wish here..."
+></textarea>
+
+
+<button
+class="button"
+onclick="saveWish()"
+>
+DONE 💗
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 3 — INVISIBLE PAPER
+================================================== -->
+
+<section class="page" id="page3">
+
+<div class="card">
+
+<div class="paper-area">
+
+<div
+class="magic-paper"
+id="magicPaper"
+>
+
+<div class="paper-cover">
+INVISIBLE PAPER
+</div>
+
+<div class="secret-message">
+Your gift will be granted ✨
+</div>
+
+</div>
+
+
+<button
+class="magic-candle"
+id="magicCandle"
+onclick="burnPaper()"
+>
+🕯️
+</button>
+
+</div>
+
+
+<h2>
+Magical Invisible Paper 🪄
+</h2>
+
+<p>
+Use the candle to reveal the secret message.
+</p>
+
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+
+<p class="warning">
+✨ Website magic only — no real fire needed.
+</p>
+
+
+<button
+class="button hidden"
+id="giftNext"
+onclick="nextPage(4)"
+>
+MY GIFT?! 🎁
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 4 — GIFT BOX
+================================================== -->
+
+<section class="page" id="page4">
+
+<div class="card">
+
+<div class="small-title">
+A LITTLE SOMETHING FOR YOU
+</div>
+
+<h2>
+Open your gift 🎁
+</h2>
+
+
+<div
+class="gift"
+onclick="openGift()"
+>
+🎁
+</div>
+
+
+<p id="giftText">
+Tap the gift box...
+</p>
+
+
+<button
+class="button hidden"
+id="flowerNext"
+onclick="nextPage(5)"
+>
+OPEN IT →
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 5 — FLOWERS
+================================================== -->
+
+<section class="page" id="page5">
+
+<div class="card">
+
+<div class="small-title">
+GIFT #1
+</div>
+
+<h2>
+Flowers for you 🌷
+</h2>
+
+
+<div class="flowers">
+
+🌷🌷🌷
+
+<br>
+
+🌿🌷🌿
+
+</div>
+
+
+<p>
+Because every baklol deserves some pretty flowers. 💐
+</p>
+
+
+<button
+class="button"
+onclick="nextPage(6)"
+>
+What's next? →
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 6 — CHOCOLATE
+================================================== -->
+
+<section class="page" id="page6">
+
+<div class="card">
+
+<div class="small-title">
+GIFT #2
+</div>
+
+<h2>
+CHOCOLATE 🍫
+</h2>
+
+
+<div
+class="chocolate"
+onclick="openChocolate()"
+>
+🍫
+</div>
+
+
+<p id="chocolateText">
+Tap the chocolate!
+</p>
+
+
+<button
+class="button hidden"
+id="letterNext"
+onclick="nextPage(7)"
+>
+ONE LAST THING... 💌
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 7 — ENVELOPE
+================================================== -->
+
+<section class="page" id="page7">
+
+<div class="card">
+
+<div class="small-title">
+FINAL GIFT
+</div>
+
+<h2>
+For Aayra 💌
+</h2>
+
+
+<div
+class="envelope"
+onclick="openEnvelope()"
+>
+
+<div class="flap"></div>
+
+<div class="envelope-body">
+💌
+</div>
+
+</div>
+
+
+<p id="envelopeText">
+Tap the envelope to open it
+</p>
+
+
+<div
+class="letter hidden"
+id="letter"
+>
+
+<h3>
+HAPPIEST BIRTHDAY AAYRA OMEGAA BAKLOL 😭🎂💗
+</h3>
+
+
+<p>
+To be really honest, I have never been much close to you ever in the past.
+But in these recent few months... you have become one of my closest friends.
+Like literally, I can share anything with you. 🫂
+</p>
+
+
+<p>
+Whenever I am at my lowest... you are there for me, for sharing everything...
+my trauma-dumping sessions and definitely those therapy sessions 😭🤚🏻
+</p>
+
+
+<p>
+Ik you may not celebrate your birthday, but maybe my lil effort can bring
+a small smile to your face. 🥹💗
+</p>
+
+
+<p>
+Thanks for staying real and true. Ik we had A LOT of fights in the starting,
+but ig that's how we were supposed to be... nvm, let the past slide. 😭
+</p>
+
+
+<p>
+I wish you the best birthday ever. 🎂✨
+I wish you to be the most successful person,
+earn A LOT, and become a billionaire...
+(donate me some too) 💸😭
+</p>
+
+
+<p>
+Yeah, that's all. I have never been good with words,
+but I wanted to do something for you. 🫶🏻
+</p>
+
+
+<p>
+Love you broo 💗
+Happy birthday once again, bottom omega 😭🎀
+</p>
+
+
+<div class="signature">
+— from your fellow bakchod 💜
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+let candles = [false,false,false];
+
+let burnProgress = 0;
+
+
+/* ========================================
+   PAGE SWITCH
+======================================== */
+
+function nextPage(number){
+
+  document
+    .querySelectorAll(".page")
+    .forEach(page => {
+      page.classList.remove("active");
+    });
+
+
+  document
+    .getElementById("page" + number)
+    .classList.add("active");
+
+
+  window.scrollTo(0,0);
+
+}
+
+
+/* ========================================
+   BLOW CANDLE
+======================================== */
+
+function blowCandle(number){
+
+  if(candles[number]){
+    return;
+  }
+
+
+  candles[number] = true;
+
+
+  document
+    .querySelectorAll(".flame")[number]
+    .classList.add("off");
+
+
+  if(candles.every(Boolean)){
+
+    document
+      .getElementById("candleText")
+      .innerHTML =
+      "All candles are blown! ✨ Make your wish...";
+
+
+    document
+      .getElementById("cakeNext")
+      .disabled = false;
+
+  }
+
+}
+
+
+/* ========================================
+   UNLOCK CARD
+======================================== */
+
+function unlockCard(){
+
+  document
+    .getElementById("lockCard")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("wishBox")
+    .classList.remove("hidden");
+
+}
+
+
+/* ========================================
+   SAVE WISH
+======================================== */
+
+function saveWish(){
+
+  const wish =
+    document
+      .getElementById("wishInput")
+      .value
+      .trim();
+
+
+  if(!wish){
+
+    alert(
+      "A wish first, baklol 😭💗"
+    );
+
+    return;
+
+  }
+
+
+  localStorage.setItem(
+    "AayraWish",
+    wish
+  );
+
+
+  nextPage(3);
+
+}
+
+
+/* ========================================
+   MAGIC PAPER
+======================================== */
+
+function burnPaper(){
+
+  if(burnProgress >= 100){
+    return;
+  }
+
+
+  burnProgress += 20;
+
+
+  document
+    .getElementById("progressBar")
+    .style.width =
+    burnProgress + "%";
+
+
+  if(burnProgress >= 100){
+
+    document
+      .getElementById("magicPaper")
+      .classList.add("revealed");
+
+
+    document
+      .getElementById("magicCandle")
+      .textContent = "✨";
+
+
+    setTimeout(function(){
+
+      document
+        .getElementById("giftNext")
+        .classList
+        .remove("hidden");
+
+    },900);
+
+  }
+
+}
+
+
+/* ========================================
+   GIFT
+======================================== */
+
+function openGift(){
+
+  document
+    .getElementById("giftText")
+    .textContent =
+    "FLOWERS FOR YOU! 🌷💐";
+
+
+  document
+    .getElementById("flowerNext")
+    .classList
+    .remove("hidden");
+
+}
+
+
+/* ========================================
+   CHOCOLATE
+======================================== */
+
+function openChocolate(){
+
+  document
+    .getElementById("chocolateText")
+    .textContent =
+    "A chocolate for the sweetest baklol 🍫💗";
+
+
+  document
+    .getElementById("letterNext")
+    .classList
+    .remove("hidden");
+
+}
+
+
+/* ========================================
+   ENVELOPE
+======================================== */
+
+function openEnvelope(){
+
+  document
+    .querySelector(".envelope")
+    .classList
+    .add("open");
+
+
+  document
+    .getElementById("envelopeText")
+    .classList
+    .add("hidden");
+
+
+  document
+    .getElementById("letter")
+    .classList
+    .remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
